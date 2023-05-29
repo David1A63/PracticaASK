@@ -1,0 +1,99 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "conversor de unidades dos",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancelar"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "como funciona esta skill",
+                        "ayuda"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "cancelar",
+                        "cerrar",
+                        "terminar",
+                        "finalizar",
+                        "adios"
+                    ]
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hola",
+                        "como estas",
+                        "di hola mundo",
+                        "di hola"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ConversorInchIntent",
+                    "slots": [
+                        {
+                            "name": "c",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "convierte {c} centimetros a pulgadas"
+                    ]
+                },
+                {
+                    "name": "ConversorYdIntent",
+                    "slots": [
+                        {
+                            "name": "can",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "convierte {can} centimetros a yardas"
+                    ]
+                },
+                {
+                    "name": "ConversorFtIntent",
+                    "slots": [
+                        {
+                            "name": "canti",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "convierte {canti} centimetros a pies"
+                    ]
+                },
+                {
+                    "name": "ConversorMtIntent",
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "convierte {cantidad} centimetros a metros"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}

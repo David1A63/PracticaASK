@@ -1,0 +1,102 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "unit conversor two",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "how this skill works",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "cancel",
+                        "close",
+                        "end",
+                        "finish",
+                        "bye"
+                    ]
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello",
+                        "how are you",
+                        "say hi world",
+                        "say hi",
+                        "hi",
+                        "say hello world",
+                        "say hello"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ConversorInchIntent",
+                    "slots": [
+                        {
+                            "name": "c",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "convert {c} centimeters to inches"
+                    ]
+                },
+                {
+                    "name": "ConversorYdIntent",
+                    "slots": [
+                        {
+                            "name": "can",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "convert {can} centimeters to yards"
+                    ]
+                },
+                {
+                    "name": "ConversorFtIntent",
+                    "slots": [
+                        {
+                            "name": "canti",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "convert {canti} centimeters to feets"
+                    ]
+                },
+                {
+                    "name": "ConversorMtIntent",
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "convert {cantidad} centimeters to meters"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
