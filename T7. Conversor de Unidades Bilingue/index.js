@@ -67,19 +67,19 @@ const ConversorInchIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const { cantidad } = handlerInput.requestEnvelope.request.intent.slots;
+    const { c } = handlerInput.requestEnvelope.request.intent.slots;
 
     // Verificar si se proporcionó la cantidad de pesos
-    if (cantidad && cantidad.value) {
+    if (c && c.value) {
       // Convertir la cantidad de cm a pulgadas
-      const centimetros = parseFloat(cantidad.value);
+      const centimetros = parseFloat(c.value);
       const conversor = 0.39;
       const resultado = centimetros * conversor;
 
       // Construir la respuesta con el resultado de la conversión
       //Agregando el interceptor
       const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
-      const responseText = requestAttributes.t('CMINCH', { cantidad: cantidad.value, resultado: resultado.toFixed(2) });
+      const responseText = requestAttributes.t('CMINCH', { cantidad: c.value, resultado: resultado.toFixed(2) });
 
       return handlerInput.responseBuilder.speak(responseText).getResponse();
     } else {
@@ -101,18 +101,18 @@ const ConversorYdIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const { cantidad } = handlerInput.requestEnvelope.request.intent.slots;
+    const { can } = handlerInput.requestEnvelope.request.intent.slots;
 
     // Verificar si se proporcionó la cantidad de pesos
-    if (cantidad && cantidad.value) {
+    if (can && can.value) {
       // Convertir la cantidad de cm a pulgadas
-      const centimetros = parseFloat(cantidad.value);
+      const centimetros = parseFloat(can.value);
       const conversor = 0.0109361;
       const resultado = centimetros * conversor;
 
       //Agregando el interceptor
       const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
-      const responseText = requestAttributes.t('CMYD', { cantidad: cantidad.value, resultado: resultado.toFixed(2) });
+      const responseText = requestAttributes.t('CMYD', { cantidad: can.value, resultado: resultado.toFixed(2) });
 
       return handlerInput.responseBuilder.speak(responseText).getResponse();
     } else {
@@ -134,18 +134,18 @@ const ConversorFtIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const { cantidad } = handlerInput.requestEnvelope.request.intent.slots;
+    const { canti } = handlerInput.requestEnvelope.request.intent.slots;
 
     // Verificar si se proporcionó la cantidad de pesos
-    if (cantidad && cantidad.value) {
+    if (canti && canti.value) {
       // Convertir la cantidad de cm a pulgadas
-      const centimetros = parseFloat(cantidad.value);
+      const centimetros = parseFloat(canti.value);
       const conversor = 0.0328084;
       const resultado = centimetros * conversor;
 
       //Agregando el interceptor
       const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
-      const responseText = requestAttributes.t('CMFT', { cantidad: cantidad.value, resultado: resultado.toFixed(2) });
+      const responseText = requestAttributes.t('CMFT', { cantidad: canti.value, resultado: resultado.toFixed(2) });
 
       return handlerInput.responseBuilder.speak(responseText).getResponse();
     } else {

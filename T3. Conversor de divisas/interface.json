@@ -1,0 +1,93 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "conversor de divisas",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "alto",
+                        "cancelar",
+                        "detente"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "como uso esta skill",
+                        "como usar",
+                        "que hace esta skill",
+                        "ayuda"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "hasta luego",
+                        "adiós",
+                        "terminar",
+                        "finalizar",
+                        "cerrar",
+                        "cierra conversor de divisas",
+                        "cierra la skill"
+                    ]
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hola",
+                        "como estás",
+                        "di hola mundo",
+                        "di hola",
+                        "hola mundo"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ConversorUSDIntent",
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "convierte {cantidad} pesos a dolares",
+                        "transforma {cantidad} pesos a dolares"
+                    ]
+                },
+                {
+                    "name": "ConversorEURIntent",
+                    "slots": [
+                        {
+                            "name": "canti",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "transforma {canti} pesos a euros",
+                        "convierte {canti} pesos a euros"
+                    ]
+                },
+                {
+                    "name": "ConversorYUNIntent",
+                    "slots": [
+                        {
+                            "name": "can",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "transforma {can} pesos a yuanes",
+                        "convierte {can} pesos a yuanes"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}

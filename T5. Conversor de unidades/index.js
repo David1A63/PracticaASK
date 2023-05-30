@@ -58,17 +58,17 @@ const ConversorYdIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const { cantidad } = handlerInput.requestEnvelope.request.intent.slots;
+    const { c } = handlerInput.requestEnvelope.request.intent.slots;
 
     // Verificar si se proporcionó la cantidad de pesos
-    if (cantidad && cantidad.value) {
+    if (c && c.value) {
       // Convertir la cantidad de cm a pulgadas
-      const centimetros = parseFloat(cantidad.value);
+      const centimetros = parseFloat(c.value);
       const conversor = 0.0109361;
       const resultado = centimetros * conversor;
 
       // Construir la respuesta con el resultado de la conversión
-      const responseText = `La cantidad de ${cantidad.value} centimetros es equivalente a ${resultado.toFixed()} yardas.`;
+      const responseText = `La cantidad de ${c.value} centimetros es equivalente a ${resultado.toFixed()} yardas.`;
 
       return handlerInput.responseBuilder.speak(responseText).getResponse();
     } else {
@@ -88,17 +88,17 @@ const ConversorFtIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const { cantidad } = handlerInput.requestEnvelope.request.intent.slots;
+    const { can } = handlerInput.requestEnvelope.request.intent.slots;
 
     // Verificar si se proporcionó la cantidad de pesos
-    if (cantidad && cantidad.value) {
+    if (can && can.value) {
       // Convertir la cantidad de cm a pulgadas
-      const centimetros = parseFloat(cantidad.value);
+      const centimetros = parseFloat(can.value);
       const conversor = 0.0328084;
       const resultado = centimetros * conversor;
 
       // Construir la respuesta con el resultado de la conversión
-      const responseText = `La cantidad de ${cantidad.value} centimetros es equivalente a ${resultado.toFixed()} pies.`;
+      const responseText = `La cantidad de ${can.value} centimetros es equivalente a ${resultado.toFixed()} pies.`;
 
       return handlerInput.responseBuilder.speak(responseText).getResponse();
     } else {
@@ -118,17 +118,17 @@ const ConversorMtIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const { cantidad } = handlerInput.requestEnvelope.request.intent.slots;
+    const { canti } = handlerInput.requestEnvelope.request.intent.slots;
 
     // Verificar si se proporcionó la cantidad de pesos
-    if (cantidad && cantidad.value) {
+    if (canti && canti.value) {
       // Convertir la cantidad de cm a pulgadas
-      const centimetros = parseFloat(cantidad.value);
+      const centimetros = parseFloat(canti.value);
       const conversor = 0.01;
       const resultado = centimetros * conversor;
 
       // Construir la respuesta con el resultado de la conversión
-      const responseText = `La cantidad de ${cantidad.value} centimetros es equivalente a ${resultado.toFixed()} metros.`;
+      const responseText = `La cantidad de ${canti.value} centimetros es equivalente a ${resultado.toFixed()} metros.`;
 
       return handlerInput.responseBuilder.speak(responseText).getResponse();
     } else {

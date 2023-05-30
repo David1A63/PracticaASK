@@ -60,17 +60,17 @@ const ConversorEURIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const { cantidad } = handlerInput.requestEnvelope.request.intent.slots;
+    const { canti } = handlerInput.requestEnvelope.request.intent.slots;
 
     // Verificar si se proporcionó la cantidad de pesos
-    if (cantidad && cantidad.value) {
+    if (canti && canti.value) {
       // Convertir la cantidad de pesos a euros (aquí puedes insertar tu lógica específica)
-      const pesos = parseFloat(cantidad.value);
+      const pesos = parseFloat(canti.value);
       const tasaCambio = 0.053; // Ejemplo: Tasa de cambio fija
       const euros = pesos * tasaCambio;
 
       // Construir la respuesta con el resultado de la conversión
-      const response = `La cantidad de ${cantidad.value} pesos es equivalente a ${euros} euros.`;
+      const response = `La cantidad de ${canti.value} pesos es equivalente a ${euros} euros.`;
 
       return handlerInput.responseBuilder.speak(response).getResponse();
     } else {
@@ -90,17 +90,17 @@ const ConversorYUNIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const { cantidad } = handlerInput.requestEnvelope.request.intent.slots;
+    const { can } = handlerInput.requestEnvelope.request.intent.slots;
 
     // Verificar si se proporcionó la cantidad de pesos
-    if (cantidad && cantidad.value) {
+    if (can && can.value) {
       // Convertir la cantidad de pesos a euros (aquí puedes insertar tu lógica específica)
-      const pesos = parseFloat(cantidad.value);
+      const pesos = parseFloat(can.value);
       const tasaCambio = 0.4; // Ejemplo: Tasa de cambio fija
       const yuanes = pesos * tasaCambio;
 
       // Construir la respuesta con el resultado de la conversión
-      const response = `La cantidad de ${cantidad.value} pesos es equivalente a ${yuanes} yuanes.`;
+      const response = `La cantidad de ${can.value} pesos es equivalente a ${yuanes} yuanes.`;
 
       return handlerInput.responseBuilder.speak(response).getResponse();
     } else {
