@@ -1,42 +1,40 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "unit conversor two",
+            "invocationName": "area calculator",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
                     "samples": [
+                        "stop",
                         "cancel"
                     ]
                 },
                 {
                     "name": "AMAZON.HelpIntent",
                     "samples": [
-                        "how this skill works",
+                        "how does this skill works",
                         "help"
                     ]
                 },
                 {
                     "name": "AMAZON.StopIntent",
                     "samples": [
-                        "cancel",
-                        "close",
                         "end",
-                        "finish",
-                        "bye"
+                        "goodbye",
+                        "close",
+                        "finish"
                     ]
                 },
                 {
                     "name": "HelloWorldIntent",
                     "slots": [],
                     "samples": [
-                        "hello",
-                        "how are you",
-                        "say hi world",
-                        "say hi",
                         "hi",
+                        "how are you",
                         "say hello world",
-                        "say hello"
+                        "say hello",
+                        "hello world"
                     ]
                 },
                 {
@@ -44,55 +42,56 @@
                     "samples": []
                 },
                 {
-                    "name": "AMAZON.FallbackIntent",
-                    "samples": []
-                },
-                {
-                    "name": "ConversorInchIntent",
+                    "name": "AreaRectanguloIntent",
                     "slots": [
                         {
-                            "name": "c",
+                            "name": "ba",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "al",
                             "type": "AMAZON.NUMBER"
                         }
                     ],
                     "samples": [
-                        "convert {c} centimeters to inches"
+                        "area of a rectangle with a base of {ba} and a height of {al}",
+                        "area of a rectangle",
+                        "calculate the area of a rectangle with a base of {ba} and a height of {al}",
+                        "calculate the area of a rectangle"
                     ]
                 },
                 {
-                    "name": "ConversorYdIntent",
+                    "name": "AreaCirculoIntent",
                     "slots": [
                         {
-                            "name": "can",
+                            "name": "radio",
                             "type": "AMAZON.NUMBER"
                         }
                     ],
                     "samples": [
-                        "convert {can} centimeters to yards"
+                        "area of a circle with a radius of {radio}",
+                        "area of a circle",
+                        "calculate the area of a circle with a radius of {radio}",
+                        "calculate the area of a circle"
                     ]
                 },
                 {
-                    "name": "ConversorFtIntent",
+                    "name": "AreaTrianguloIntent",
                     "slots": [
                         {
-                            "name": "canti",
+                            "name": "base",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "altura",
                             "type": "AMAZON.NUMBER"
                         }
                     ],
                     "samples": [
-                        "convert {canti} centimeters to feets"
-                    ]
-                },
-                {
-                    "name": "ConversorMtIntent",
-                    "slots": [
-                        {
-                            "name": "cantidad",
-                            "type": "AMAZON.NUMBER"
-                        }
-                    ],
-                    "samples": [
-                        "convert {cantidad} centimeters to meters"
+                        "area of a triangle with base {base} and height {altura}",
+                        "area of a triangle",
+                        "calculate the area of a triangle with a base of {base} and a height of {altura}",
+                        "calculate the area of a triangle"
                     ]
                 }
             ],

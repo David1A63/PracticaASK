@@ -1,11 +1,12 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "conversor de unidades dos",
+            "invocationName": "calculadora de areas",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
                     "samples": [
+                        "alto",
                         "cancelar"
                     ]
                 },
@@ -19,11 +20,10 @@
                 {
                     "name": "AMAZON.StopIntent",
                     "samples": [
-                        "cancelar",
-                        "cerrar",
                         "terminar",
-                        "finalizar",
-                        "adios"
+                        "adios",
+                        "cerrar",
+                        "finalizar"
                     ]
                 },
                 {
@@ -31,9 +31,10 @@
                     "slots": [],
                     "samples": [
                         "hola",
-                        "como estas",
+                        "como estás",
                         "di hola mundo",
-                        "di hola"
+                        "di hola",
+                        "hola mundo"
                     ]
                 },
                 {
@@ -41,55 +42,56 @@
                     "samples": []
                 },
                 {
-                    "name": "AMAZON.FallbackIntent",
-                    "samples": []
-                },
-                {
-                    "name": "ConversorInchIntent",
+                    "name": "AreaRectanguloIntent",
                     "slots": [
                         {
-                            "name": "c",
+                            "name": "ba",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "al",
                             "type": "AMAZON.NUMBER"
                         }
                     ],
                     "samples": [
-                        "convierte {c} centimetros a pulgadas"
+                        "area de un rectangulo con una base de {ba} y una altura de {al}",
+                        "area de un rectangulo",
+                        "calcula el area de un rectangulo con una base de {ba} y una altura de {al}",
+                        "calcula el area de un rectangulo"
                     ]
                 },
                 {
-                    "name": "ConversorYdIntent",
+                    "name": "AreaCirculoIntent",
                     "slots": [
                         {
-                            "name": "can",
+                            "name": "radio",
                             "type": "AMAZON.NUMBER"
                         }
                     ],
                     "samples": [
-                        "convierte {can} centimetros a yardas"
+                        "area de un circulo con un radio de {radio}",
+                        "area de un circulo",
+                        "calcula el area de un circulo con un radio de {radio}",
+                        "calcula el area de un circulo"
                     ]
                 },
                 {
-                    "name": "ConversorFtIntent",
+                    "name": "AreaTrianguloIntent",
                     "slots": [
                         {
-                            "name": "canti",
+                            "name": "base",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "altura",
                             "type": "AMAZON.NUMBER"
                         }
                     ],
                     "samples": [
-                        "convierte {canti} centimetros a pies"
-                    ]
-                },
-                {
-                    "name": "ConversorMtIntent",
-                    "slots": [
-                        {
-                            "name": "cantidad",
-                            "type": "AMAZON.NUMBER"
-                        }
-                    ],
-                    "samples": [
-                        "convierte {cantidad} centimetros a metros"
+                        "area de un triangulo con una base de {base} y una altura de {altura}",
+                        "area de un triangulo",
+                        "calcula el area de un triangulo con una base de {base} y una altura de {altura}",
+                        "calcula el area de un triangulo"
                     ]
                 }
             ],
