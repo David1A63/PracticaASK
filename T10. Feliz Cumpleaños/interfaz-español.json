@@ -1,0 +1,309 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "feliz cumpleaños",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RegisterBirthdayIntent",
+                    "slots": [
+                        {
+                            "name": "day",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "bien me has dicho que cumples años en el mes {month}  pero en que día",
+                                "el {day}",
+                                "el día {day}",
+                                "{day}"
+                            ]
+                        },
+                        {
+                            "name": "month",
+                            "type": "TipoMes",
+                            "samples": [
+                                "en {month}",
+                                "{month}"
+                            ]
+                        },
+                        {
+                            "name": "year",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "samples": [
+                                "{year}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{day} de {month} de {year}",
+                        "el {day}",
+                        "cumplo el {day}",
+                        "en el año {year}",
+                        "{day} de {month}",
+                        "graba mi cumpleaños",
+                        "registra mi cumpleaños",
+                        "recuerda mi cumpleaños",
+                        "registra mi cumple",
+                        "recuerda mi cumple"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "TipoMes",
+                    "values": [
+                        {
+                            "id": "12",
+                            "name": {
+                                "value": "diciembre"
+                            }
+                        },
+                        {
+                            "id": "11",
+                            "name": {
+                                "value": "noviembre"
+                            }
+                        },
+                        {
+                            "id": "10",
+                            "name": {
+                                "value": "octubre"
+                            }
+                        },
+                        {
+                            "id": "9",
+                            "name": {
+                                "value": "septiembre"
+                            }
+                        },
+                        {
+                            "id": "8",
+                            "name": {
+                                "value": "agosto"
+                            }
+                        },
+                        {
+                            "id": "7",
+                            "name": {
+                                "value": "julio"
+                            }
+                        },
+                        {
+                            "id": "6",
+                            "name": {
+                                "value": "junio"
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "mayo"
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "abril"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "marzo"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "febrero"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "enero"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "RegisterBirthdayIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "day",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.640627030719.796397961429"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isGreaterThan",
+                                    "prompt": "Slot.Validation.640627030719.796397961429.201192606918",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "isLessThan",
+                                    "prompt": "Slot.Validation.640627030719.796397961429.1268158149285",
+                                    "value": "31"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "month",
+                            "type": "TipoMes",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.640627030719.253971156153"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.640627030719.253971156153.38968711988"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "year",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.640627030719.1478706783300"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isGreaterThanOrEqualTo",
+                                    "prompt": "Slot.Validation.640627030719.1478706783300.1488728518938",
+                                    "value": "1900"
+                                },
+                                {
+                                    "type": "isLessThanOrEqualTo",
+                                    "prompt": "Slot.Validation.640627030719.1478706783300.893668566842",
+                                    "value": "2016"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.640627030719.796397961429",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "que día"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "esta bien, que día"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.640627030719.253971156153",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "bien, el día {day} pero en que mes"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "dime el mes"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "en que mes"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "bien, pero que mes"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.640627030719.1478706783300",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "en que año naciste"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "en que año"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.640627030719.796397961429.201192606918",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "dime un día entre uno y treinta y uno"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.640627030719.796397961429.1268158149285",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "dime un día entre uno y treinta y uno"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.640627030719.253971156153.38968711988",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "dime un mes válido por favor"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.640627030719.1478706783300.1488728518938",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "no creo que seas tan viejo, intenta otra vez"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.640627030719.1478706783300.893668566842",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "no creo que seas tan joven, intentalo otra vez"
+                    }
+                ]
+            }
+        ]
+    }
+}
