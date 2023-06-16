@@ -1,0 +1,215 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "career sugestion",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "whats this",
+                        "how does work this skill",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "bye",
+                        "end"
+                    ]
+                },
+                {
+                    "name": "CarreraIntent",
+                    "slots": [
+                        {
+                            "name": "carrera",
+                            "type": "carrera",
+                            "samples": [
+                                "ive studied {carrera}",
+                                "ive coursed the {carrera} career"
+                            ]
+                        },
+                        {
+                            "name": "propedeutico",
+                            "type": "propedeutico",
+                            "samples": [
+                                "ive coursed the propedeutic {propedeutico}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "i have the profile {propedeutico}",
+                        "ive studied {carrera}",
+                        "which career should i choose",
+                        "tell me which career should i choose",
+                        "what career should i choose if i have coursed the career {carrera} and with a profile {propedeutico}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "carrera",
+                    "values": [
+                        {
+                            "id": "6",
+                            "name": {
+                                "value": "automotive maintenance"
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "food preparation"
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "Hosting services"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "equipment maintenance"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "programming"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "administration"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "propedeutico",
+                    "values": [
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "letters"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "biology"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "mathematics"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CarreraIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "carrera",
+                            "type": "carrera",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.779115523930.865840570285"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.779115523930.865840570285.1092070624633"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "propedeutico",
+                            "type": "propedeutico",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.779115523930.1685161606707"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.779115523930.1685161606707.1585946758232"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.779115523930.865840570285",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what course did you take in high school"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What educational program did you take in high school"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.779115523930.865840570285.1092070624633",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "tell me an available career at cecyteh"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.779115523930.1685161606707",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What preparatory course did you take"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What propedeutic did you take in your last semester"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.779115523930.1685161606707.1585946758232",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "tell me a propedeutic available"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,217 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "sugerencia de carreras",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancelar"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "que es esto",
+                        "como funciona esta skill",
+                        "ayuda"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "adios",
+                        "cancelar",
+                        "finalizar"
+                    ]
+                },
+                {
+                    "name": "CarreraIntent",
+                    "slots": [
+                        {
+                            "name": "carrera",
+                            "type": "carrera",
+                            "samples": [
+                                "estudie {carrera}",
+                                "curse la carrera {carrera}"
+                            ]
+                        },
+                        {
+                            "name": "propedeutico",
+                            "type": "propedeutico",
+                            "samples": [
+                                "curse el propedeutico {propedeutico}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "tengo el perfil {propedeutico}",
+                        "estudie {carrera}",
+                        "que carrera elijo",
+                        "dime que carrera puedo elegir",
+                        "que carrera elijo si vengo de la carrera {carrera} y con el perfil de {propedeutico}",
+                        "que carrera de la uthh debo elegir si estudie la carrera {carrera} con el propedeutico en {propedeutico}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "carrera",
+                    "values": [
+                        {
+                            "id": "6",
+                            "name": {
+                                "value": "mantenimiento automotríz"
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "preparación de alimentos"
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "servicios de hospedaje"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "mantenimiento de equipos"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "programación"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "administración"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "propedeutico",
+                    "values": [
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "letras"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "biología"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "matemático"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CarreraIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "carrera",
+                            "type": "carrera",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.779115523930.865840570285"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.779115523930.865840570285.1092070624633"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "propedeutico",
+                            "type": "propedeutico",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.779115523930.1685161606707"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.779115523930.1685161606707.1585946758232"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.779115523930.865840570285",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "que carrera cursaste en la prepa"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "que programa educativo cursaste en la preparatoria"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.779115523930.865840570285.1092070624633",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "dime una carrera disponible del cecyteh"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.779115523930.1685161606707",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "que propedeutico cursaste"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "que propedeutico llevaste en tu ultimo semestre"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.779115523930.1685161606707.1585946758232",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "dime un propedeutico disponible"
+                    }
+                ]
+            }
+        ]
+    }
+}

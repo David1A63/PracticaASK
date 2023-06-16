@@ -1,0 +1,62 @@
+module.exports = {
+    en: {
+        translation: {
+            WELCOME_MSG: 'Welcome, I am the career advisor. Based on what you have studied and your academic profile, I can suggest a career for you to study at UTHH. Try saying: "Which career should I choose if I come from the Programming field and have a Mathematical profile?"',
+            ADM_MAT: 'I suggest the career: Administration. However, you can explore the following options: TIC, Business Development, Accounting',
+            ADM_BIO: 'I suggest the career: Administration. However, you can explore the following options: Agrobiotechnology, Food Processing, Gastronomy',
+            ADM_LET: 'I suggest the career: Administration. However, you can explore the following options: TIC, Business Development, Accounting',
+            PRO_MAT: 'I suggest the career: TIC. However, you can explore the following options: Accounting, Administration, Mechatronics, Construction',
+            PRO_BIO: 'I suggest the career: TIC. However, you can explore the following options: Agrobiotechnology, Food Processing, Gastronomy',
+            PRO_LET: 'I suggest the career: TIC. However, you can explore the following options: Accounting, Administration, Business Development',
+            MDE_MAT: 'I suggest the career: TIC. However, you can explore the following options: Mechatronics, Automotive Mechanics, Industrial Mechanics',
+            MDE_BIO: 'I suggest the career: TIC. However, you can explore the following options: Agrobiotechnology, Food Processing, Gastronomy',
+            MDE_LET: 'I suggest the career: TIC. However, you can explore the following options: Mechatronics, Administration, Business Development, Accounting',
+            SDH_MAT: 'I suggest the career: Administration. However, you can explore the following options: Business Development, Accounting, Construction',
+            SDH_BIO: 'I suggest the career: Administration. However, you can explore the following options: Gastronomy, Food Processing',
+            SDH_LET: 'I suggest the career: Administration. However, you can explore the following options: Business Development',
+            PDA_MAT: 'I suggest the career: Gastronomy. However, you can explore the following options: Food Processing, Agrobiotechnology',
+            PDA_BIO: 'I suggest the career: Gastronomy. However, you can explore the following options: Food Processing',
+            PDA_LET: 'I suggest the career: Gastronomy. However, you can explore the following options: Food Processing, Administration, Accounting',
+            MAA_MAT: 'I suggest the career: Automotive Mechanics. However, you can explore the following options: Industrial Mechanics, Mechatronics, TIC, Construction',
+            MAA_BIO: 'I suggest the career: Automotive Mechanics. However, you can explore the following options: Industrial Mechanics, Gastronomy, Food Processing',
+            MAA_LET: 'I suggest the career: Automotive Mechanics. However, you can explore the following options: Administration, Business Development, Accounting',
+            ERR_PROP: 'The prerequisite has not been entered, please end the process and try again.',
+            ERR_CARR: 'The career has not been entered, please end the process and try again.',
+            HELP_MSG: 'Hello, I am the career advisor. I can help you choose a career at UTHH based on your academic profile. Try saying: "Which career should I choose if I come from the Programming field and have a Mathematical profile?"',
+            CANCEL_MSG: 'Goodbye!',
+            FALL_MSG: 'Im sorry, I didnt understand that. Please try again.',
+            ERROR_MSG: 'Im sorry, I had trouble processing your request. Please try again.',
+            FINAL_MSG: 'Coursed Career: {{carr}}. Propedeutic: {{prope}}. Sugested Careers: {{sug_car}}'
+        }
+    },
+    es: {
+        translation: {
+            WELCOME_MSG: 'Bienvenido, soy el consejero de carreras, de acuerdo a lo que estudiaste y a tu perfil academico puedo sugerirte una carrera a estudiar en la UTHH. Prueba diciendo: que carrera elijo si vengo de la carrera Programación y con el perfil de Matemático',
+            ADM_MAT: 'Te sugiero la carrera: Administración. Aunque puedes explorar las siguientes opciones: TIC, Desarrollo de Negocios, Contaduría',
+            ADM_BIO: 'Te sugiero la carrera: Administración. Aunque puedes explorar las siguientes opciones: Agrobiotecnología, Procesos Alimentarios, Gastronomía',
+            ADM_LET: 'Te sugiero la carrera: Administración. Aunque puedes explorar las siguientes opciones: TIC, Desarrollo de Negocios, Contaduría',
+            PRO_MAT: 'Te sugiero la carrera: TIC. Aunque puedes explorar las siguientes opciones:  Contaduría, Administración, Mecatrónica, Construcción',
+            PRO_BIO: 'Te sugiero la carrera: TIC. Aunque puedes explorar las siguientes opciones:  Agrobiotecnología, Procesos Alimentarios, Gastronomía',
+            PRO_LET: 'Te sugiero la carrera: TIC. Aunque puedes explorar las siguientes opciones:  Contaduría, Administración, Desarrollo de Negocios',
+            MDE_MAT: 'Te sugiero la carrera: TIC. Aunque puedes explorar las siguientes opciones:  Mecatrónica, Mecánica Automotriz, Mecánica Industrial',
+            MDE_BIO: 'Te sugiero la carrera: TIC. Aunque puedes explorar las siguientes opciones:  Agrobiotecnología, Procesos Alimentarios, Gastronomía',
+            MDE_LET: 'Te sugiero la carrera: TIC. Aunque puedes explorar las siguientes opciones:  Mecatrónica, Administración, Desarrollo de Negocios, Contaduría',
+            SDH_MAT: 'Te sugiero la carrera: Administración. Aunque puedes explorar las siguientes opciones:  Desarrollo de Negocios, Contaduría, Construcción',
+            SDH_BIO: 'Te sugiero la carrera: Administración. Aunque puedes explorar las siguientes opciones:  Gastronomía, Procesos Alimentarios',
+            SDH_LET: 'Te sugiero la carrera: Administración. Aunque puedes explorar las siguientes opciones:  Desarrollo de Negocios',
+            PDA_MAT: 'Te sugiero la carrera: Gastronomía. Aunque puedes explorar las siguientes opciones:  Procesos Alimentarios, Agrobiotecnología',
+            PDA_BIO: 'Te sugiero la carrera: Gastronomía. Aunque puedes explorar las siguientes opciones:  Procesos Alimentarios',
+            PDA_LET: 'Te sugiero la carrera: Gastronomía. Aunque puedes explorar las siguientes opciones:  Procesos Alimentarios, Administración, Contaduría',
+            MAA_MAT: 'Te sugiero la carrera: Mecánica Automotriz. Aunque puedes explorar las siguientes opciones:  Mecánica Industrial, Mecatrónica, TIC, Construcción',
+            MAA_BIO: 'Te sugiero la carrera: Mecánica Automotriz. Aunque puedes explorar las siguientes opciones:  Mecánica Industrial, Gastronomía, Procesos Alimentarios',
+            MAA_LET: 'Te sugiero la carrera: Mecánica Automotriz. Aunque puedes explorar las siguientes opciones:  Administración, Desarrollo de Negocios, Contaduría',
+            ERR_PROP: 'No se ha ingresado el propedeutico, por favor finaliza el proceso y vuelve a intentarlo.',
+            ERR_CARR: 'No se ha ingresado la carrera, por favor finaliza el proceso y vuelve a intentarlo.',
+            HELP_MSG: 'Hola, soy el consejero de carreras, puedo ayudarte a elegir una carrera en la UTHH en base a tu perfil academico, prueba diciendo: que carrera elijo si vengo de la carrera Programación y con el perfil de Matemático',
+            CANCEL_MSG: 'Hasta Luego!',
+            FALL_MSG: 'Lo siento, no entiendo nada de eso. Por favor, intenta de nuevo.', 
+            ERROR_MSG: 'Lo siento, tuve problemas procesando tu solicitud, por favor intenta de nuevo.',
+            FINAL_MSG: 'Carrera Cursada: {{carr}}. Propedeutico: {{prope}}. Carreras Sugeridas: {{sug_car}}'
+        }
+    }
+}

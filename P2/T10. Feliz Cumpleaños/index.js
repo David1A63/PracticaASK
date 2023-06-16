@@ -54,7 +54,7 @@ const RegisterBirthdayIntentHandler = {
         const month = intent.slots.month.resolutions.resolutionsPerAuthority[0].values[0].value.name;
         const year = intent.slots.year.value;
 
-        const speechText = requestAttributes.t('REGISTER_MSG', day, month, year); // we'll save these values later
+        const speechText = requestAttributes.t('REGISTER_MSG', day, month, year);
 
         return handlerInput.responseBuilder
             .speak(speechText)
@@ -175,21 +175,21 @@ const ErrorHandler = {
     }
 };
 
-// This request interceptor will log all incoming requests to this lambda
+// Este interceptor de peticiones registrara todas las peticiones a lambda
 const LoggingRequestInterceptor = {
     process(handlerInput) {
         console.log(`Incoming request: ${JSON.stringify(handlerInput.requestEnvelope.request)}`);
     }
 };
 
-// This response interceptor will log all outgoing responses of this lambda
+// Este interceptor de respuestas registrara todas las respuestas salientes de esta lambda
 const LoggingResponseInterceptor = {
     process(handlerInput, response) {
       console.log(`Outgoing response: ${JSON.stringify(response)}`);
     }
 };
 
-// This request interceptor will bind a translation function 't' to the requestAttributes.
+// Este interceptor de peticiones enlazará la función de traducir a la función 't' a la petición de atributos
 const LocalizationRequestInterceptor = {
   process(handlerInput) {
     const localizationClient = i18n.use(sprintf).init({
